@@ -18,7 +18,9 @@ echo "并复制其中 'token =' 后面的那一大段 JSON 字符串。"
 echo "格式类似于: {\"access_token\":\"ya29...\",\"token_type\":\"Bearer\",...}"
 echo "=========================================================="
 echo ""
-read -r -p "请在此处粘贴你的 token JSON 字符串并回车: " token
+read -r -p "1. 请输入专属 Client ID (若无，直接回车跳过): " client_id
+read -r -p "2. 请输入专属 Client Secret (若无，直接回车跳过): " client_secret
+read -r -p "3. 请粘贴核心的 token JSON 字符串并回车: " token
 
 if [[ -z "$token" ]]; then
     echo "错误: Token 不能为空。"
@@ -27,9 +29,12 @@ fi
 
 mkdir -p /root/.config/rclone
 
+# 动态组装配置文件，有 client_id 才会写入对应行
 cat > /root/.config/rclone/rclone.conf <<EOF
 [vps-gdrive]
 type = drive
+$([[ -n "$client_id" ]] && echo "client_id = $client_id")
+$([[ -n "$client_secret" ]] && echo "client_secret = $client_secret")
 scope = drive.file
 team_drive = 
 token = $token
