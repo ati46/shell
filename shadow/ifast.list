@@ -1,0 +1,16 @@
+DOMAIN,secure.ifastnetwork.com
+DOMAIN,ifastnetwork.com
+DOMAIN,ifastgm.com.sg
+DOMAIN,secure.ifastgp.com
+DOMAIN-SUFFIX,ifastnetwork.com
+DOMAIN-SUFFIX,ifastgm.com.sg
+DOMAIN-SUFFIX,ifastgp.com
+
+# iFAST Group / Fintech / Global Bank
+DOMAIN,ifastcorp.com
+DOMAIN,ifastfintech.com
+DOMAIN,ifastgb.com
+DOMAIN-SUFFIX,ifastcorp.com
+DOMAIN-SUFFIX,ifastfintech.com
+DOMAIN-SUFFIX,ifastgb.com
+
