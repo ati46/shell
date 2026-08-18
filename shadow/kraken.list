@@ -1,0 +1,17 @@
+DOMAIN,kraken.com
+DOMAIN,www.kraken.com
+DOMAIN,pro.kraken.com
+DOMAIN,support.kraken.com
+DOMAIN,status.kraken.com
+DOMAIN-SUFFIX,kraken.com
+
+# Kraken Spot REST / WebSocket API
+DOMAIN,api.kraken.com
+DOMAIN,ws.kraken.com
+DOMAIN,ws-auth.kraken.com
+
+# Kraken Futures REST / WebSocket API
+DOMAIN,futures.kraken.com
+DOMAIN,ws.futures.kraken.com
+DOMAIN,demo-futures.kraken.com
+
